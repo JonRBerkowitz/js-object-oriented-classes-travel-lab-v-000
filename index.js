@@ -1,8 +1,7 @@
 class Driver {
-  constructor(name, joinDate) {
+  constructor(name, startDate) {
     this.name = name;
-    this.joinDate = joinDate;
-  }
+    this.startDate = new Date(startDate)
 }
 
 class Route {
