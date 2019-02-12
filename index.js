@@ -22,6 +22,10 @@ class Route {
   constructor(beginningLocation, endingLocation) {
     this.beginningLocation = beginningLocation;
     this.endingLocation = endingLocation;
-
+  }
+  blocksTravelled() {
+    let horizontalDistance = eastWest.indexOf(this.endingLocation.horizontal) - eastWest.indexOf(this.beginningLocation.horizontal);
+    let verticalDistance = this.endingLocation.vertical - this.beginningLocation.vertical;
+    return Math.abs( horizontalDistance ) + Math.abs( verticalDistance );
   }
 }
